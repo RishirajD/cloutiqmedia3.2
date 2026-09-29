@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f4f0">
+
+<title>Clout IQ Media — Influencer Marketing Agency | Where Influence Meets Intelligence</title>
+<meta name="description" content="Clout IQ Media is an influencer marketing agency that channels raw cultural energy into measurable brand growth. Hyper-growth SEO, social domination and paid acquisition for ambitious D2C brands.">
+<link rel="canonical" href="https://cloutiqmedia.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cloutiqmedia.com/">
+<meta property="og:site_name" content="Clout IQ Media">
+<meta property="og:title" content="Clout IQ Media — Where Influence Meets Intelligence">
+<meta property="og:description" content="An influencer marketing agency that turns raw cultural energy into measurable brand growth.">
+<meta property="og:image" content="https://cloutiqmedia.com/assets/main%20logo%203.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clout IQ Media — Where Influence Meets Intelligence">
+<meta name="twitter:description" content="An influencer marketing agency that turns raw cultural energy into measurable brand growth.">
+<meta name="twitter:image" content="https://cloutiqmedia.com/assets/main%20logo%203.png">
+
+<link rel="icon" href="assets/ciqciq.jpeg">
+<link rel="apple-touch-icon" href="assets/ciqciq.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="advanced.css">
+
+<script>
+  /* Set capability flags before first paint so CSS never traps content invisible. */
+  (function () {
+    var d = document.documentElement;
+    d.classList.remove('no-js');
+    d.classList.add('js');
+    try {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) d.classList.add('reduced-motion');
+
+      /* Enable deck3d only for desktop screens where 3D perspective deck runs */
+      if (!reduce && window.innerWidth >= 1025) d.classList.add('deck3d');
+
+      var c = document.createElement('canvas');
+      if (c.getContext('webgl') || c.getContext('experimental-webgl')) d.classList.add('has-webgl');
+    } catch (e) {}
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clout IQ Media",
+  "alternateName": "CIQ",
+  "url": "https://cloutiqmedia.com/",
+  "logo": "https://cloutiqmedia.com/assets/main%20logo%20final.png",
+  "slogan": "Where Influence Meets Intelligence.",
+  "description": "Influencer marketing agency specialising in creator-led growth, hyper-growth SEO, social domination and paid acquisition.",
+  "email": "hello@cloutiqmedia.com",
+  "sameAs": ["https://www.instagram.com/cloutiqmedia"]
+}
+</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#hero">Skip to main content</a>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SVG FILTER DEFINITIONS — liquid distortion for the preloader
+     ══════════════════════════════════════════════════════════════ -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="liquidWave" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.014" numOctaves="2" seed="7" result="turb"/>
+      <feDisplacementMap id="liquidWaveMap" in="SourceGraphic" in2="turb" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PHASE 1 — PRELOADER & CINEMATIC ENTRY
+     ══════════════════════════════════════════════════════════════ -->
+<div id="preloader" class="preloader" role="progressbar" aria-label="Loading Clout IQ Media" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+
+  <div class="preloader__grid" aria-hidden="true"></div>
+
+  <div class="preloader__core">
+    <span class="preloader__dot"></span>
+
+    <svg class="preloader__ring" viewBox="0 0 220 220" aria-hidden="true">
+      <circle class="ring__track"  cx="110" cy="110" r="88"></circle>
+      <circle class="ring__ticks"  cx="110" cy="110" r="102"></circle>
+      <circle class="ring__bar" id="ringBar" cx="110" cy="110" r="88"></circle>
+    </svg>
+
+    <svg class="preloader__reticle" viewBox="0 0 220 220" aria-hidden="true">
+      <path d="M110 4 v22 M110 194 v22 M4 110 h22 M194 110 h22"></path>
+      <rect x="26" y="26" width="168" height="168"></rect>
+    </svg>
+  </div>
+
+  <div class="preloader__readout" aria-hidden="true">
+    <span class="readout__label">WHERE INFLUENCE MEETS INTELLIGENCE</span>
+    <span class="readout__count"><span id="preloadCount">00</span><i>%</i></span>
+  </div>
+
+  <div class="preloader__brand" aria-hidden="true">
+    <span class="pb__word pb__word--navy">CLOUT</span>
+    <span class="pb__word pb__word--orange">IQ</span>
+    <span class="pb__word pb__word--navy">MEDIA</span>
+  </div>
+
+  <div class="preloader__veil" aria-hidden="true"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     GLOBAL AMBIENT FLUID FIELD (WebGL) + CUSTOM CURSOR
+     ══════════════════════════════════════════════════════════════ -->
+<canvas id="fluidField" class="fluid-field" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div id="cursor" class="cursor" aria-hidden="true">
+  <span class="cursor__ring"></span>
+  <span class="cursor__label"></span>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════════ -->
+<header id="siteHeader" class="header">
+  <a class="header__brand" href="#hero" aria-label="Clout IQ Media home">
+    <img class="header__logo" src="assets/main%20logo%20final.png" alt="Clout IQ Media" width="180" height="48">
+  </a>
+
+  <nav class="header__nav" aria-label="Primary">
+    <a href="#hero" data-nav-index="01"><span>Home</span></a>
+    <a href="#manifesto" data-nav-index="02"><span>About Us</span></a>
+    <a href="#strategies" data-nav-index="03"><span>Services</span></a>
+    <a href="#partners" data-nav-index="04"><span>Influencers</span></a>
+    <a href="#contact" data-nav-index="06"><span>Contact Us</span></a>
+  </nav>
+
+  <a class="btn btn--pill header__cta" href="#contact" data-cursor="arrow">
+    <span class="btn__text">Let's Talk</span>
+    <span class="btn__glow" aria-hidden="true"></span>
+  </a>
+
+  <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span>
+  </button>
+</header>
+
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+  <a href="#hero">Home</a>
+  <a href="#manifesto">About Us</a>
+  <a href="#strategies">Services</a>
+  <a href="#partners">Influencers</a>
+  <a href="#contact">Contact Us</a>
+</nav>
+
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PHASE 2 — THE EXTENDED HERO
+     ══════════════════════════════════════════════════════════════ -->
+<section id="hero" class="hero">
+
+  <!-- Massive background lettering, scrolls opposite to the page -->
+  <div class="hero__marquee" aria-hidden="true">
+    <div class="marquee" data-marquee-dir="-1">
+      <div class="marquee__track" data-marquee-track>
+        <span>CLOUT IQ MEDIA</span><span>&bull;</span><span>CLOUT IQ MEDIA</span><span>&bull;</span>
+        <span>CLOUT IQ MEDIA</span><span>&bull;</span>
+      </div>
+    </div>
+    <div class="marquee marquee--ghost" data-marquee-dir="1">
+      <div class="marquee__track" data-marquee-track>
+        <span>INTELLIGENCE</span><span>&bull;</span><span>INTELLIGENCE</span><span>&bull;</span>
+        <span>INTELLIGENCE</span><span>&bull;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__inner">
+
+    <div class="hero__copy">
+      <p class="eyebrow reveal-fade">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        <span class="empathy-text">SMARTER INFLUENCER MARKETING. REAL IMPACT.</span>
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="line__in">WHERE INFLUENCE</span></span>
+        <!-- <span class="line"><span class="line__in">INFLUENCE</span></span> -->
+        <span class="line"><span class="line__in">MEETS <em>INTELLIGENCE</em></span></span>
+      </h1>
+
+      <p class="hero__lede reveal-fade">
+        At Clout IQ Media, we make influencer marketing smarter, faster, and more measurable. Our tech-powered ecosystem provides brands access to 310,000+ creators, backed by creator intelligence, seamless campaign execution, and real-time analytics. From finding the perfect creator to measuring campaign impact, Clout IQ Media brings everything together under one platform.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#contact" data-cursor="arrow">
+          <span class="btn__text">Create a campaign</span>
+          <span class="btn__glow" aria-hidden="true"></span>
+        </a>
+        <a class="btn btn--ghost" href="#contact" data-cursor="arrow">
+          <span class="btn__text">Register</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__halo" aria-hidden="true"></div>
+
+      <div class="hero__reel" aria-hidden="true">
+
+        <!-- Column 1 — scrolls up -->
+        <div class="reel__col reel__col--up">
+          <div class="reel__strip">
+            <div class="reel__cell"><video src="assets/videos/video1.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <div class="reel__cell"><video src="assets/videos/video4.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <!-- duplicate for seamless infinite loop -->
+            <div class="reel__cell"><video src="assets/videos/video7.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <div class="reel__cell"><video src="assets/videos/video9.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+          </div>
+        </div>
+
+        <!-- Column 2 — scrolls down (offset) -->
+        <div class="reel__col reel__col--down">
+          <div class="reel__strip">
+            <div class="reel__cell"><video src="assets/videos/video3.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <div class="reel__cell"><video src="assets/videos/video6.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <!-- duplicate -->
+            <div class="reel__cell"><video src="assets/videos/video10.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <div class="reel__cell"><video src="assets/videos/video11.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+          </div>
+        </div>
+
+        <!-- Column 3 — scrolls up (slower) -->
+        <div class="reel__col reel__col--up reel__col--slow">
+          <div class="reel__strip">
+            <div class="reel__cell"><video src="assets/videos/video5.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <div class="reel__cell"><video src="assets/videos/video2.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <!-- duplicate -->
+            <div class="reel__cell"><video src="assets/videos/video8.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+            <div class="reel__cell"><video src="assets/videos/video1.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+          </div>
+        </div>
+
+        <!-- Orange accent border overlay -->
+        <div class="reel__frame" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__scanline" aria-hidden="true"></div>
+    </div>
+
+  </div>
+
+  <!-- Live metrics strip -->
+  <div class="hero__stats" aria-label="Agency at a glance">
+    <div class="stat">
+      <span class="stat__num" data-count="310010" data-suffix="+">0</span>
+      <span class="stat__label">Influencers Onboarded</span>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="22" data-suffix="+">0</span>
+      <span class="stat__label">Brands Partnered</span>
+    </div>
+    <div class="stat">
+      <span class="stat__num" data-count="55" data-suffix="+">0</span>
+      <span class="stat__label">Campaigns Executed</span>
+    </div>
+    <div class="stat">
+      <span class="stat__num stat__num--word">24 Hrs</span>
+      <span class="stat__label">Turnaround Time (TAT)</span>
+    </div>
+    <div class="stat">
+      <span class="stat__num">4.8/5</span>
+      <span class="stat__label">Average Client Rating</span>
+    </div>
+    <div class="stat">
+      <span class="stat__num stat__num--word">95%</span>
+      <span class="stat__label">On-Time Delivery</span>
+    </div>
+  </div>
+
+  
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PARTNER LOGO MARQUEE
+     ══════════════════════════════════════════════════════════════ -->
+<section id="partners" class="partners" aria-label="Brands we work with">
+  <p class="partners__kicker">BRANDS WE'VE WORKED WITH</p>
+
+  <div class="logo-marquee" data-marquee-dir="-1">
+    <div class="logo-marquee__track" data-marquee-track data-marquee-clone>
+      <span class="logo"><img src="assets/1783269382764-4ljtsfqk.png" alt="mamaearth" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/dermaco1.png" alt="The Derma Co" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/doctorseth.png" alt="Dr. Sheth's" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/bblunt.jpeg" alt="BBlunt" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/1783269382764-75an8paa.png" alt="Odeon" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/dorisco.jpeg" alt="Doris &amp; Co" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/1783269382765-nvemwndq.png" alt="&amp; Done" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/wink.png" alt="Wink Cosmetics" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/SkinInspired.jpg%20(1).png" alt="Skin Inspired" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/agarolifestyle.com_Logo.jpg%20(1).png" alt="Agaro Lifestyle" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/rok.png" alt="Republic of Karting" loading="lazy" decoding="async"></span>
+      <span class="logo"><img src="assets/channels4_profile.jpg%20(1).png" alt="Partner channel" loading="lazy" decoding="async"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PHASE 3 — "REVEALING GLASS" SERVICES
+     ══════════════════════════════════════════════════════════════ -->
+<section id="strategies" class="strategies">
+  <div class="strategies__pin" data-strat-pin>
+
+    <div class="strategies__left">
+      <p class="section-tag"><span>02</span> Capabilities</p>
+      <h2 class="strategies__heading">
+        <span class="line"><span class="line__in">OUR</span></span>
+        <span class="line"><span class="line__in">SERVICES</span></span>
+      </h2>
+      <p class="strategies__body">
+        From influencer discovery to campaign execution, content creation, performance amplification, and analytics, Clout IQ Media offers a complete end-to-end ecosystem built to make influencer marketing smarter and more effective. Our integrated services combine technology, creator intelligence, and data-driven strategies to help brands create meaningful connections, drive performance, and deliver measurable impact.
+      </p>
+
+      <ol class="strategies__index" aria-hidden="true">
+        <li data-strat-index="0"><span>01</span> Influencer Discovery &amp; Management</li>
+        <li data-strat-index="1"><span>02</span> Campaign Strategy &amp; Execution</li>
+        <li data-strat-index="2"><span>03</span> Content &amp; Creator Collaboration</li>
+        <li data-strat-index="3"><span>04</span> Performance Marketing &amp; Amplification</li>
+        <li data-strat-index="4"><span>05</span> Analytics &amp; Reporting</li>
+      </ol>
+
+      <button class="btn btn--ghost svc-modal-open" id="svcModalOpen" aria-haspopup="dialog">
+        <span class="btn__text">See All Services →</span>
+      </button>
+
+      <div class="strategies__progress" aria-hidden="true">
+        <span class="strategies__progress-bar" data-strat-progress></span>
+      </div>
+    </div>
+
+    <div class="strategies__right">
+      <div class="deck" data-strat-deck>
+
+        <article class="card" data-strat-card="0">
+          <div class="card__glass" aria-hidden="true"></div>
+          <div class="card__viz">
+            <canvas class="card__canvas" data-viz="seo" aria-hidden="true"></canvas>
+          </div>
+          <div class="card__body">
+            <span class="card__num">01</span>
+            <h3 class="card__title">Influencer Discovery<br>&amp; Management</h3>
+            <p class="card__text">
+              Find the perfect influencers with our AI-powered discovery and vetting process.
+              Access to 3,00,010+ creators across YouTube, Instagram and every major niche.
+            </p>
+            <ul class="card__tags">
+              <li>AI-powered discovery</li><li>Creator vetting</li><li>Relationship management</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-strat-card="1">
+          <div class="card__glass" aria-hidden="true"></div>
+          <div class="card__viz">
+            <canvas class="card__canvas" data-viz="social" aria-hidden="true"></canvas>
+          </div>
+          <div class="card__body">
+            <span class="card__num">02</span>
+            <h3 class="card__title">Campaign Strategy<br>&amp; Execution</h3>
+            <p class="card__text">
+              End-to-end campaign planning and execution tailored to your goals.
+              We manage creator collaborations that deliver authentic &amp; engaging content.
+            </p>
+            <ul class="card__tags">
+              <li>Campaign planning</li><li>Creator collaboration</li><li>Content strategy</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-strat-card="2">
+          <div class="card__glass" aria-hidden="true"></div>
+          <div class="card__viz">
+            <canvas class="card__canvas" data-viz="collab" aria-hidden="true"></canvas>
+          </div>
+          <div class="card__body">
+            <span class="card__num">03</span>
+            <h3 class="card__title">Content &amp; Creator<br>Collaboration</h3>
+            <p class="card__text">
+              We manage creator collaborations that deliver authentic &amp; engaging content
+              built for the feed's physics — one voice hits, the network carries it.
+            </p>
+            <ul class="card__tags">
+              <li>UGC engine</li><li>Authentic content</li><li>Community building</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-strat-card="3">
+          <div class="card__glass" aria-hidden="true"></div>
+          <div class="card__viz">
+            <canvas class="card__canvas" data-viz="paid" aria-hidden="true"></canvas>
+          </div>
+          <div class="card__body">
+            <span class="card__num">04</span>
+            <h3 class="card__title">Performance Marketing<br>&amp; Amplification</h3>
+            <p class="card__text">
+              Drive conversions and ROI with performance-focused influencer campaigns.
+              We pour budget into the winners — accelerating spend only where the maths works.
+            </p>
+            <ul class="card__tags">
+              <li>Performance campaigns</li><li>ROI amplification</li><li>Paid acquisition</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-strat-card="4">
+          <div class="card__glass" aria-hidden="true"></div>
+          <div class="card__viz">
+            <canvas class="card__canvas" data-viz="analytics" aria-hidden="true"></canvas>
+          </div>
+          <div class="card__body">
+            <span class="card__num">05</span>
+            <h3 class="card__title">Analytics<br>&amp; Reporting</h3>
+            <p class="card__text">
+              Real-time analytics and detailed reporting to measure every impact.
+              Clear ROI measurement and transparent performance tracking.
+            </p>
+            <ul class="card__tags">
+              <li>Real-time dashboards</li><li>ROI reporting</li><li>Transparent insights</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     SERVICES MODAL
+     ══════════════════════════════════════════════════════════════ -->
+<div id="svcModal" class="svc-modal" role="dialog" aria-modal="true" aria-label="All Services" hidden>
+  <div class="svc-modal__backdrop"></div>
+  <div class="svc-modal__panel" data-lenis-prevent>
+
+    <button class="svc-modal__close" id="svcModalClose" aria-label="Close services">
+      <span aria-hidden="true">✕</span>
+    </button>
+
+    <div class="svc-modal__head">
+      <p class="section-tag"><span>02</span> Capabilities</p>
+      <h2 class="svc-modal__title">OUR <em>SERVICES</em></h2>
+    </div>
+
+    <div class="svc-modal__grid">
+
+      <div class="svc-card">
+        <div class="svc-card__icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/search--v1.png" alt="" aria-hidden="true">
+        </div>
+        <span class="svc-card__num">01</span>
+        <h3 class="svc-card__title">Influencer Discovery &amp; Management</h3>
+        <p class="svc-card__text">Find the perfect influencers with our AI-powered discovery and vetting process.</p>
+        <ul class="svc-card__tags"><li>AI-powered discovery</li><li>Creator vetting</li><li>Relationship management</li></ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-card__icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/megaphone.png" alt="" aria-hidden="true">
+        </div>
+        <span class="svc-card__num">02</span>
+        <h3 class="svc-card__title">Campaign Strategy &amp; Execution</h3>
+        <p class="svc-card__text">End-to-end campaign planning and execution tailored to your goals.</p>
+        <ul class="svc-card__tags"><li>Campaign planning</li><li>Creator collaboration</li><li>Content strategy</li></ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-card__icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/conference.png" alt="" aria-hidden="true">
+        </div>
+        <span class="svc-card__num">03</span>
+        <h3 class="svc-card__title">Content &amp; Creator Collaboration</h3>
+        <p class="svc-card__text">We manage creator collaborations that deliver authentic &amp; engaging content.</p>
+        <ul class="svc-card__tags"><li>UGC engine</li><li>Authentic content</li><li>Community building</li></ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-card__icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/commercial.png" alt="" aria-hidden="true">
+        </div>
+        <span class="svc-card__num">04</span>
+        <h3 class="svc-card__title">Performance Marketing &amp; Amplification</h3>
+        <p class="svc-card__text">Drive conversions and ROI with performance-focused influencer campaigns.</p>
+        <ul class="svc-card__tags"><li>Performance campaigns</li><li>ROI amplification</li><li>Paid acquisition</li></ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-card__icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/combo-chart--v1.png" alt="" aria-hidden="true">
+        </div>
+        <span class="svc-card__num">05</span>
+        <h3 class="svc-card__title">Analytics &amp; Reporting</h3>
+        <p class="svc-card__text">Real-time analytics and detailed reporting to measure every impact.</p>
+        <ul class="svc-card__tags"><li>Real-time dashboards</li><li>ROI reporting</li><li>Transparent insights</li></ul>
+      </div>
+
+    </div>
+
+    <div class="svc-modal__cta">
+      <a class="btn btn--solid" href="#contact" id="svcModalCta">
+        <span class="btn__text">Start a Project →</span>
+        <span class="btn__glow" aria-hidden="true"></span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PHASE 4 — TEXT-TRIGGERED KINETIC REVEAL
+     ══════════════════════════════════════════════════════════════ -->
+<section id="manifesto" class="manifesto" aria-label="Manifesto">
+  <p class="section-tag section-tag--center"><span>03</span> Manifesto</p>
+
+  <div class="manifesto__stage">
+    <p class="kinetic" data-kinetic>Data. Creators. Results.</p>
+    <p class="kinetic" data-kinetic>We combine data intelligence with creative storytelling.</p>
+    <p class="kinetic" data-kinetic>Campaigns that don't just reach audiences — they move them.</p>
+    <p class="kinetic" data-kinetic>Where Influence Meets Intelligence.</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     WHY CHOOSE US
+     ══════════════════════════════════════════════════════════════ -->
+<section id="why" class="why">
+  <div class="why__inner">
+
+    <div class="why__left">
+      <p class="section-tag"><span>04</span> Why Choose Us</p>
+      <h2 class="why__title">
+        <span class="line"><span class="line__in">WHERE INFLUENCE</span></span>
+        <span class="line"><span class="line__in">MEETS <em>IMPACT</em></span></span>
+      </h2>
+      <p class="why__desc">
+        We create data-driven social campaigns that connect brands with the right audiences, amplify their voice, and turn influence into measurable impact.
+      </p>
+      <a class="btn btn--solid" href="#manifesto" data-cursor="arrow">
+        <span class="btn__text">About CloutIQ →</span>
+        <span class="btn__glow" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="why__grid">
+
+      <div class="why__card">
+        <div class="why__card-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/group-foreground-selected.png" alt="" aria-hidden="true">
+        </div>
+        <h4 class="why__card-title">Vast Creator Network</h4>
+        <p class="why__card-text">Access to 3,00,010+ influencers across YouTube, Instagram and every major niche.</p>
+      </div>
+
+      <div class="why__card">
+        <div class="why__card-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/artificial-intelligence.png" alt="" aria-hidden="true">
+        </div>
+        <h4 class="why__card-title">Data-Driven Decisions</h4>
+        <p class="why__card-text">AI-powered insights to find the right creators for the right audience.</p>
+      </div>
+
+      <div class="why__card">
+        <div class="why__card-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/checked-2--v1.png" alt="" aria-hidden="true">
+        </div>
+        <h4 class="why__card-title">Proven Track Record</h4>
+        <p class="why__card-text">22+ brands, 55+ successful campaigns, and counting.</p>
+      </div>
+
+      <div class="why__card">
+        <div class="why__card-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/clock--v1.png" alt="" aria-hidden="true">
+        </div>
+        <h4 class="why__card-title">24/7 Operations</h4>
+        <p class="why__card-text">We work 24-hours to deliver faster turnaround and seamless execution.</p>
+      </div>
+
+      <div class="why__card">
+        <div class="why__card-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/graph-report.png" alt="" aria-hidden="true">
+        </div>
+        <h4 class="why__card-title">Transparent Reporting</h4>
+        <p class="why__card-text">Real-time performance tracking and clear ROI measurement.</p>
+      </div>
+
+      <div class="why__card">
+        <div class="why__card-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ff6b1a/customer-support.png" alt="" aria-hidden="true">
+        </div>
+        <h4 class="why__card-title">End-to-End Support</h4>
+        <p class="why__card-text">From strategy to execution, we've got you covered.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PROCESS — SIMPLE STEPS. POWERFUL RESULTS.
+     ══════════════════════════════════════════════════════════════ -->
+<section id="process" class="process">
+  <div class="process__head">
+    <p class="section-tag section-tag--center"><span>06</span> Our Process</p>
+    <h2 class="process__title">
+      <span class="line"><span class="line__in">SIMPLE STEPS.</span></span>
+      <span class="line"><span class="line__in">POWERFUL <em>RESULTS.</em></span></span>
+    </h2>
+  </div>
+
+  <div class="process__track">
+    <div class="process__line" aria-hidden="true"></div>
+
+    <div class="process__step">
+      <div class="process__node">
+        <span class="process__num">01</span>
+        <span class="process__dot" aria-hidden="true"></span>
+      </div>
+      <div class="process__body">
+        <h3 class="process__step-title">Understand</h3>
+        <p class="process__step-text">We understand your brand, goals and target audience.</p>
+      </div>
+    </div>
+
+    <div class="process__step">
+      <div class="process__node">
+        <span class="process__num">02</span>
+        <span class="process__dot" aria-hidden="true"></span>
+      </div>
+      <div class="process__body">
+        <h3 class="process__step-title">Strategize</h3>
+        <p class="process__step-text">We create a data-backed influencer strategy tailored to your needs.</p>
+      </div>
+    </div>
+
+    <div class="process__step">
+      <div class="process__node">
+        <span class="process__num">03</span>
+        <span class="process__dot" aria-hidden="true"></span>
+      </div>
+      <div class="process__body">
+        <h3 class="process__step-title">Execute</h3>
+        <p class="process__step-text">We collaborate with the right creators and launch impactful campaigns.</p>
+      </div>
+    </div>
+
+    <div class="process__step">
+      <div class="process__node">
+        <span class="process__num">04</span>
+        <span class="process__dot" aria-hidden="true"></span>
+      </div>
+      <div class="process__body">
+        <h3 class="process__step-title">Track &amp; Analyze</h3>
+        <p class="process__step-text">Real-time tracking and analytics to measure performance.</p>
+      </div>
+    </div>
+
+    <div class="process__step">
+      <div class="process__node">
+        <span class="process__num">05</span>
+        <span class="process__dot" aria-hidden="true"></span>
+      </div>
+      <div class="process__body">
+        <h3 class="process__step-title">Optimize &amp; Scale</h3>
+        <p class="process__step-text">We optimize results and scale what works for maximum ROI.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     OUR EXPERIENCES
+     ══════════════════════════════════════════════════════════════ -->
+<section id="experiences" class="experiences">
+  <div class="experiences__content">
+    <p class="section-tag">Our Experiences</p>
+    <h2 class="experiences__title">Make Your Brand<br>Go Viral With Us</h2>
+    <p class="experiences__desc">
+      With years of experiences providing comprehensive influencer marketing services, CloutIQMedia handles every aspect of your campaign, from initial strategy development and influencer selection to content creation, campaign management, and detailed reporting.
+    </p>
+  </div>
+  <div class="experiences__skills" id="experiencesSkills">
+    <div class="skill">
+      <div class="skill__head">
+        <span class="skill__name">Success campaign</span>
+        <span class="skill__val"><span class="skill__num" data-val="92">0</span>%</span>
+      </div>
+      <div class="skill__bar"><div class="skill__fill" data-target="92"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill__head">
+        <span class="skill__name">Promote brand</span>
+        <span class="skill__val"><span class="skill__num" data-val="75">0</span>%</span>
+      </div>
+      <div class="skill__bar"><div class="skill__fill" data-target="75"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill__head">
+        <span class="skill__name">Project done</span>
+        <span class="skill__val"><span class="skill__num" data-val="86">0</span>%</span>
+      </div>
+      <div class="skill__bar"><div class="skill__fill" data-target="86"></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PHASE 6 — FOOTER METAMORPHOSIS
+     ══════════════════════════════════════════════════════════════ -->
+<footer id="contact" class="footer">
+  <canvas id="fogCanvas" class="footer__fog" aria-hidden="true"></canvas>
+  <div class="footer__bloom" aria-hidden="true"></div>
+
+  <!-- ── Vertical video showcase ── -->
+  <div class="footer__reel" aria-hidden="true">
+    <!-- Col 1 up -->
+    <div class="footer__reel-col footer__reel-col--up">
+      <div class="footer__reel-strip">
+        <div class="footer__reel-cell"><video src="assets/videos/video1.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video4.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video7.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <!-- duplicate -->
+        <div class="footer__reel-cell"><video src="assets/videos/video8.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video9.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+      </div>
+    </div>
+    <!-- Col 2 down -->
+    <div class="footer__reel-col footer__reel-col--down">
+      <div class="footer__reel-strip">
+        <div class="footer__reel-cell"><video src="assets/videos/video2.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video5.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video3.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <!-- duplicate -->
+        <div class="footer__reel-cell"><video src="assets/videos/video10.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video11.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+      </div>
+    </div>
+    <!-- Col 3 up slow -->
+    <div class="footer__reel-col footer__reel-col--slow">
+      <div class="footer__reel-strip">
+        <div class="footer__reel-cell"><video src="assets/videos/video6.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video1.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video5.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <!-- duplicate -->
+        <div class="footer__reel-cell"><video src="assets/videos/video8.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video7.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+      </div>
+    </div>
+    <!-- Col 4 down -->
+    <div class="footer__reel-col footer__reel-col--down">
+      <div class="footer__reel-strip">
+        <div class="footer__reel-cell"><video src="assets/videos/video3.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video7.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video2.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <!-- duplicate -->
+        <div class="footer__reel-cell"><video src="assets/videos/video10.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video9.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+      </div>
+    </div>
+    <!-- Col 5 up -->
+    <div class="footer__reel-col footer__reel-col--up">
+      <div class="footer__reel-strip">
+        <div class="footer__reel-cell"><video src="assets/videos/video4.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video6.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video11.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <!-- duplicate -->
+        <div class="footer__reel-cell"><video src="assets/videos/video1.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+        <div class="footer__reel-cell"><video src="assets/videos/video5.mp4" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Dual logo marquee rows ── -->
+  <div class="footer__logo-band" aria-hidden="true">
+    <!-- Row 1: left → -->
+    <div class="footer__logo-row footer__logo-row--fwd">
+      <div class="footer__logo-track">
+        <span class="footer__logo-item"><img src="assets/1783269382764-4ljtsfqk.png" alt="mamaearth"></span>
+        <span class="footer__logo-item"><img src="assets/dermaco1.png" alt="The Derma Co"></span>
+        <span class="footer__logo-item"><img src="assets/doctorseth.png" alt="Dr. Sheth's"></span>
+        <span class="footer__logo-item"><img src="assets/bblunt.jpeg" alt="BBlunt"></span>
+        <span class="footer__logo-item"><img src="assets/1783269382764-75an8paa.png" alt="Odeon"></span>
+        <!-- <span class="footer__logo-item"><img src="assets/dorisco.jpeg" alt="Doris &amp; Co"></span> -->
+        <span class="footer__logo-item"><img src="assets/wink.png" alt="Wink"></span>
+        <span class="footer__logo-item"><img src="assets/SkinInspired.jpg%20(1).png" alt="Skin Inspired"></span>
+
+        <!-- <span class="footer__logo-item"><img src="assets/rok.png" alt="ROK"></span> -->
+        <!-- duplicate -->
+        <span class="footer__logo-item"><img src="assets/1783269382764-4ljtsfqk.png" alt="mamaearth"></span>
+        <span class="footer__logo-item"><img src="assets/dermaco1.png" alt="The Derma Co"></span>
+        <span class="footer__logo-item"><img src="assets/doctorseth.png" alt="Dr. Sheth's"></span>
+        <span class="footer__logo-item"><img src="assets/bblunt.jpeg" alt="BBlunt"></span>
+        <span class="footer__logo-item"><img src="assets/1783269382764-75an8paa.png" alt="Odeon"></span>
+        <!-- <span class="footer__logo-item"><img src="assets/dorisco.jpeg" alt="Doris &amp; Co"></span> -->
+        <span class="footer__logo-item"><img src="assets/wink.png" alt="Wink"></span>
+        <span class="footer__logo-item"><img src="assets/SkinInspired.jpg%20(1).png" alt="Skin Inspired"></span>
+
+        <!-- <span class="footer__logo-item"><img src="assets/rok.png" alt="ROK"></span> -->
+      </div>
+    </div>
+    <!-- Row 2: ← right (opposite) -->
+    <div class="footer__logo-row footer__logo-row--rev">
+      <div class="footer__logo-track">
+        <span class="footer__logo-item"><img src="assets/1783269382765-nvemwndq.png" alt="&amp; Done"></span>
+        <!-- <span class="footer__logo-item"><img src="assets/SkinInspired.jpg%20(1).png" alt="Skin Inspired"></span> -->
+        <span class="footer__logo-item"><img src="assets/agarolifestyle.com_Logo.jpg%20(1).png" alt="Agaro"></span>
+        <span class="footer__logo-item"><img src="assets/channels4_profile.jpg%20(1).png" alt="Partner"></span>
+        <span class="footer__logo-item"><img src="assets/bblunt.jpeg" alt="BBlunt"></span>
+        <span class="footer__logo-item"><img src="assets/dermaco1.png" alt="The Derma Co"></span>
+        <span class="footer__logo-item"><img src="assets/doctorseth.png" alt="Dr. Sheth's"></span>
+        <span class="footer__logo-item"><img src="assets/1783269382764-4ljtsfqk.png" alt="mamaearth"></span>
+        <span class="footer__logo-item"><img src="assets/dorisco.jpeg" alt="Doris &amp; Co"></span>
+        <span class="footer__logo-item"><img src="assets/rok.png" alt="ROK"></span>
+
+
+        <!-- duplicate -->
+        <span class="footer__logo-item"><img src="assets/1783269382765-nvemwndq.png" alt="&amp; Done"></span>
+        <!-- <span class="footer__logo-item"><img src="assets/SkinInspired.jpg%20(1).png" alt="Skin Inspired"></span> -->
+        <span class="footer__logo-item"><img src="assets/agarolifestyle.com_Logo.jpg%20(1).png" alt="Agaro"></span>
+        <span class="footer__logo-item"><img src="assets/channels4_profile.jpg%20(1).png" alt="Partner"></span>
+        <span class="footer__logo-item"><img src="assets/bblunt.jpeg" alt="BBlunt"></span>
+        <span class="footer__logo-item"><img src="assets/dermaco1.png" alt="The Derma Co"></span>
+        <span class="footer__logo-item"><img src="assets/doctorseth.png" alt="Dr. Sheth's"></span>
+        <span class="footer__logo-item"><img src="assets/1783269382764-4ljtsfqk.png" alt="mamaearth"></span>
+        <span class="footer__logo-item"><img src="assets/dorisco.jpeg" alt="Doris &amp; Co"></span>
+        <span class="footer__logo-item"><img src="assets/rok.png" alt="ROK"></span>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Big CTA stage -->
+  <div class="footer__stage">
+    <a class="footer__cta" href="mailto:hello@cloutiqmedia.com" data-cursor="arrow" aria-label="Email Clout IQ Media">
+      <span class="footer__cta-line"><span>LET'S PLAN</span></span>
+      <span class="footer__cta-line"><span>A CAMPAIGN</span></span>
+    </a>
+    <!-- Animated signal orbs -->
+    <div class="footer__orbs" aria-hidden="true">
+      <span class="footer__signal"></span>
+      <span class="footer__orb"></span>
+      <span class="footer__orb"></span>
+      <span class="footer__orb"></span>
+      <span class="footer__orb"></span>
+      <span class="footer__orb"></span>
+      <span class="footer__orb"></span>
+      <span class="footer__orb"></span>
+    </div>
+  </div>
+
+  <!-- Base grid: logo · quick links · services · social + contact -->
+  <div class="footer__base">
+
+    <!-- Col 1: Logo + tagline -->
+    <div class="footer__brand">
+      <img src="assets/main%20logo%203.png" alt="Clout IQ Media" loading="lazy" decoding="async">
+      <p>Where influence meets intelligence.</p>
+      <p class="footer__brand-sub">India's data-driven influencer marketing agency connecting brands with 3,00,000+ creators across YouTube, Instagram &amp; beyond.</p>
+    </div>
+
+    <!-- Col 2: Quick links -->
+    <div class="footer__col">
+      <h4 class="footer__col-title">Quick Links</h4>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#hero">Home</a>
+        <a href="#manifesto">About Us</a>
+        <a href="#strategies">Services</a>
+        <a href="#partners">Influencers</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+
+    <!-- Col 3: Services -->
+    <div class="footer__col">
+      <h4 class="footer__col-title">Services</h4>
+      <nav class="footer__nav" aria-label="Services">
+        <a href="#strategies">Influencer Discovery</a>
+        <a href="#strategies">Campaign Strategy</a>
+        <a href="#strategies">Creator Collaboration</a>
+        <a href="#strategies">Performance Marketing</a>
+        <a href="#strategies">Analytics &amp; Reporting</a>
+      </nav>
+    </div>
+
+    <!-- Col 4: Connect -->
+    <div class="footer__col">
+      <h4 class="footer__col-title">Connect</h4>
+      <div class="footer__connect">
+        <a href="mailto:hello@cloutiqmedia.com" class="footer__connect-item">
+          <span class="footer__connect-label">Email</span>
+          <span>hello@cloutiqmedia.com</span>
+        </a>
+        <a href="tel:+917042254560" class="footer__connect-item">
+          <span class="footer__connect-label">Phone</span>
+          <span>+91 7042254560</span>
+        </a>
+        <div class="footer__connect-item">
+          <span class="footer__connect-label">Location</span>
+          <span>Mumbai, India</span>
+        </div>
+      </div>
+      <nav class="footer__social" aria-label="Social media">
+        <a href="https://www.instagram.com/cloutiqmedia" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </nav>
+    </div>
+
+    <!-- Legal bar -->
+    <p class="footer__legal">
+      &copy; <span id="year">2024</span> Clout IQ Media. All Rights Reserved.
+      &nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Terms &amp; Conditions</a>
+    </p>
+
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="clount.js"></script>
+
+</body>
+</html>
